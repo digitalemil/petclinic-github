@@ -1,0 +1,58 @@
+{
+  "id": "/__REPLACEME__/mysql",
+  "cpus": 1,
+  "mem": 512,
+  "disk": 0,
+  "instances": 1,
+  "networks": [
+    {
+      "mode": "container/bridge"
+    }
+  ],
+  "container": {
+    "type": "DOCKER",
+    "volumes": [
+      {
+        "containerPath": "mysqldata",
+        "mode": "RW",
+        "persistent": {
+          "type": "root",
+          "size": 1000
+        }
+      },
+      {
+        "containerPath": "/var/lib/mysql",
+        "hostPath": "mysqldata",
+        "mode": "RW"
+      }
+    ],
+    "docker": {
+      "image": "mysql:5.7.22",
+      "forcePullImage": false
+    },
+   "portMappings": [
+      {
+        "containerPort": 3306,
+        "hostPort": 0,
+        "labels": {
+          "VIP_0": "/__REPLACEME__mysql:3306"
+        },
+        "protocol": "tcp",
+        "servicePort": 10103,
+        "name": "mysql"
+      }
+    ]
+  },
+  "env": {
+    "MYSQL_USER": "root",
+    "MYSQL_PASSWORD": "root",
+    "MYSQL_ROOT_PASSWORD": "root",
+    "MYSQL_DATABASE": "defaultdb"
+  },
+  "unreachableStrategy": "disabled",
+  "upgradeStrategy": {
+    "minimumHealthCapacity": 0,
+    "maximumOverCapacity": 0
+  }
+}
+ 

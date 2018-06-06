@@ -1,0 +1,6 @@
+"env": {
+    "myjdbcurl": "jdbc:mysql://proddatabasesmysql.marathon.l4lb.thisdcos.directory:3306/defaultdb",
+    "myjdbcuser": "root",
+    "myjdbcpassword": "root",
+    "jpa.database": "defaultdb"
+  }
