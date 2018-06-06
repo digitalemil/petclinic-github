@@ -1,7 +1,7 @@
 {
   "id": "/__REPLACEME__/mysql",
-  "cpus": 1,
-  "mem": 512,
+  "cpus": 0.2,
+  "mem": 256,
   "disk": 0,
   "instances": 1,
   "networks": [
