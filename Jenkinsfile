@@ -52,11 +52,6 @@ pipeline {
             }
         }
 
-        stage("Archive") { 
-            steps {
-            }
-        }
-   
         stage("Deploy") { 
             steps {
                 sh "cp tomcat.template tomcat.json"
