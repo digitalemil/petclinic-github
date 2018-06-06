@@ -27,14 +27,14 @@
   "cpus": 1,
   "disk": 0,
   "env": {
-    "JAVA_OPTS": "-Xmx1536m",
+    "JAVA_OPTS": "-Xmx384m",
     "myjdbcurl": "jdbc:mysql://__REPLACEVIP__mysql.marathon.l4lb.thisdcos.directory:3306/petclinic",
     "myjdbcuser": "root",
     "myjdbcpassword": "root"
   },
   "fetch": [
     {
-      "uri": "http://devtoolsnexus.marathon.l4lb.thisdcos.directory:8080/repository/coffeemenu/petclinic-v__REPLACEVERSION__-build-__REPLACEBUILD__.war",
+      "uri": "http://devtoolsjenkins.marathon.l4lb.thisdcos.directory:80/job/Petclinic/__REPLACEBUILD__/artifact/target/petclinic.war",
       "extract": true,
       "executable": false,
       "cache": false
@@ -54,7 +54,7 @@
   ],
   "instances": 1,
   "maxLaunchDelaySeconds": 3600,
-  "mem": 2048,
+  "mem": 512,
   "gpus": 0,
   "networks": [
     {
