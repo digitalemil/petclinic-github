@@ -39,6 +39,11 @@ pipeline {
                     }
                 )
             }
+            post {
+                always {
+                    archiveArtifacts artifacts: 'target/*.war', fingerprint: true
+                }
+            }
         }
         
         stage("Test") {	
@@ -65,7 +70,7 @@ pipeline {
 
         stage("Load Test") {
             steps {
-                sh "sleep 120"
+                sh "sleep 60"
                 sh "curl -LO https://s3-us-west-2.amazonaws.com/mesosphere-demo-others/apache-jmeter-4.0.tgz"
                 sh "cp petclinic_test_plan.template petclinic_test_plan.jmx"
                 sh "sed -ie 's@__INSERTHOST__@tomcatbuild"+"${env.BUILD_NUMBER}"+".marathon.l4lb.thisdcos.directory@g;' petclinic_test_plan.jmx"
@@ -84,7 +89,7 @@ pipeline {
             sh "curl  -X PUT marathon.mesos:8080/v2/apps//test/build"+"${env.BUILD_NUMBER}"+"/mysql -d @mysql0.json -H 'Content-type: application/json'"          
             sh "curl  -X PUT marathon.mesos:8080/v2/apps//test/build"+"${env.BUILD_NUMBER}"+"/tomcat -d @tomcat0.json -H 'Content-type: application/json'"          
               // marathon credentialsId: 'dcos-token', id: '/test/build'+"${env.BUILD_NUMBER}"+'/mysql', url: 'http://marathon.mesos:8080', filename: 'mysql0.json', forceUpdate: true
-	        archiveArtifacts artifacts: 'target/*.war', fingerprint: true
+
         }
     }
 }
