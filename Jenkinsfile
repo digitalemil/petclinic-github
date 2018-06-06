@@ -54,8 +54,6 @@ pipeline {
 
         stage("Archive") { 
             steps {
-                sh "curl -v -u admin:admin123 --upload-file target/petclinic.war  http://devtoolsnexus.marathon.l4lb.thisdcos.directory:8080/repository/coffeemenu/petclinic-v"+"${VERSION}"+"-build-"+"${env.BUILD_NUMBER}"+".war"
-                sh "curl -v -u admin:admin123 --upload-file target/petclinic.war  http://devtoolsnexus.marathon.l4lb.thisdcos.directory:8080/repository/coffeemenu/petclinic-v"+"${VERSION}"+"-build-latest.war"
             }
         }
    
@@ -91,6 +89,7 @@ pipeline {
             sh "curl  -X PUT marathon.mesos:8080/v2/apps//test/build"+"${env.BUILD_NUMBER}"+"/mysql -d @mysql0.json -H 'Content-type: application/json'"          
             sh "curl  -X PUT marathon.mesos:8080/v2/apps//test/build"+"${env.BUILD_NUMBER}"+"/tomcat -d @tomcat0.json -H 'Content-type: application/json'"          
               // marathon credentialsId: 'dcos-token', id: '/test/build'+"${env.BUILD_NUMBER}"+'/mysql', url: 'http://marathon.mesos:8080', filename: 'mysql0.json', forceUpdate: true
+	        archiveArtifacts artifacts: 'target/*.war', fingerprint: true
         }
     }
 }
