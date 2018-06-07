@@ -1,0 +1,84 @@
+{
+  "labels": {
+    "DCOS_PACKAGE_OPTIONS": "eyJ0b21jYXQiOnsibmFtZSI6InByb2QvYXBwc2VydmVyL3RvbWNhdCIsImNwdXMiOjEsIm1lbSI6MjA0OCwiaW5zdGFuY2VzIjoxLCJ3YXIiOiJodHRwOi8vZGV2dG9vbHNuZXh1cy5tYXJhdGhvbi5sNGxiLnRoaXNkY29zLmRpcmVjdG9yeTo4MDgwL3JlcG9zaXRvcnkvY29mZmVlbWVudS9wZXRjbGluaWMtdjQuMy4xMS1idWlsZC1sYXRlc3Qud2FyIiwiamF2YV9vcHRzIjoiLVhteDE1MzZtIiwiZG9ja2VyaW1hZ2UiOiJtZXNvc3BoZXJlL2Rjb3NhcHBzdHVkaW86Y29mZmVlbWVudS10b21jYXQtOS4wLjUtOHUxNjItbGludXgteDY0LTAuMS4wIiwiZ3JhY2VwZXJpb2QiOjYwLCJoZWFsdGhjaGVja3BhdGgiOiIvIn0sIkpEQkMiOnsiSkRCQy1VUkwiOiJqZGJjOm15c3FsOi8vdGVzdGJ1aWxkM215c3FsLm1hcmF0aG9uLmw0bGIudGhpc2Rjb3MuZGlyZWN0b3J5OjMzMDYvZGVmYXVsdGRiIiwiVXNlciI6InJvb3QiLCJQYXNzd29yZCI6InJvb3QifX0=",
+    "DCOS_SERVICE_SCHEME": "http",
+    "DCOS_PACKAGE_SOURCE": "http://coffee-menu.marathon.l4lb.thisdcos.directory:80/repo",
+    "HAPROXY_GROUP": "external",
+    "DCOS_PACKAGE_METADATA": "eyJwYWNrYWdpbmdWZXJzaW9uIjoiMy4wIiwibmFtZSI6InRvbWNhdCIsInZlcnNpb24iOiI5LjAuNSIsIm1haW50YWluZXIiOiJkZUBkaWdpdGFsZW1pbC5kZSIsImRlc2NyaXB0aW9uIjoiQXBhY2hlIFRvbWNhdCIsInRhZ3MiOlsidG9tY2F0IiwiSmF2YSIsIkphdmFFRSIsIkpha2FydGFFRSIsIkpha2FydGEiLCJhcHBzZXJ2ZXIiXSwic2VsZWN0ZWQiOmZhbHNlLCJzY20iOiJodHRwczovL3RvbWNhdC5hcGFjaGUub3JnIiwid2Vic2l0ZSI6Imh0dHBzOi8vZGlnaXRhbGVtaWwuZGUiLCJmcmFtZXdvcmsiOmZhbHNlLCJwcmVJbnN0YWxsTm90ZXMiOiJUaGlzIERDL09TIFNlcnZpY2UgaXMgY3VycmVudGx5IEVYUEVSSU1FTlRBTC4gVGhlcmUgbWF5IGJlIGJ1Z3MsIGluY29tcGxldGUgZmVhdHVyZXMsIGluY29ycmVjdCBkb2N1bWVudGF0aW9uLCBvciBvdGhlciBkaXNjcmVwYW5jaWVzLiIsInBvc3RJbnN0YWxsTm90ZXMiOiJTZXJ2aWNlIGluc3RhbGxlZC5cblxuUGxlYXNlIGFjY2VzcyB0aGUgVUkgdGhyb3VnaCB0aGUgZW5kcG9pbnQgY3JlYXRlZCBpbiBNYXJhdGhvbi1MQi4iLCJsaWNlbnNlcyI6W3sibmFtZSI6IkFQQUNIRSAyLjAgTElDRU5TRSIsInVybCI6Imh0dHBzOi8vd3d3LmFwYWNoZS5vcmcvbGljZW5zZXMvTElDRU5TRS0yLjAifV0sImltYWdlcyI6eyJpY29uLXNtYWxsIjoiaHR0cHM6Ly9zMy11cy13ZXN0LTIuYW1hem9uYXdzLmNvbS9tZXNvc3BoZXJlLWRlbW8tb3RoZXJzL3RvbWNhdC1zbWFsbC5wbmciLCJpY29uLW1lZGl1bSI6Imh0dHBzOi8vczMtdXMtd2VzdC0yLmFtYXpvbmF3cy5jb20vbWVzb3NwaGVyZS1kZW1vLW90aGVycy90b21jYXQtbWVkaXVtLnBuZyIsImljb24tbGFyZ2UiOiJodHRwczovL3MzLXVzLXdlc3QtMi5hbWF6b25hd3MuY29tL21lc29zcGhlcmUtZGVtby1vdGhlcnMvdG9tY2F0LWxhcmdlLnBuZyIsInNjcmVlbnNob3RzIjpbXX19",
+    "DCOS_SERVICE_NAME": "weblogicbuild__REPLACEBUILD__",
+    "DCOS_SERVICE_PORT_INDEX": "0",
+    "DCOS_PACKAGE_DEFINITION": "eyJtZXRhZGF0YSI6eyJDb250ZW50LVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZGNvcy51bml2ZXJzZS5wYWNrYWdlK2pzb247Y2hhcnNldD11dGYtODt2ZXJzaW9uPXYzIiwiQ29udGVudC1FbmNvZGluZyI6Imd6aXAifSwiZGF0YSI6Ikg0c0lBQUFBQUFBQUFLMVhiVytyT0JQOUt5aWZHd0pKMDl0VVd1bkplMGhiMnBCQUV1NnVWZ1ljNHNZR0xvYlE5T3IrOTJkc1NKcStiTzkrMkVvVndUTStjM3htYk1ZL2F3bnlkeWdrVWVqZ2xKTTRxdDNVV3FwV3U2aEZpR0Y0eVdMbW93emU5eWQ3UjlYVU5veWttR0xFOFdtaWRsRmppRVFaL09NVS9BTDh2NENFSkVNVU0wTFZBTU9jQUhNL0pVbFdJblVoK2hZcmkyT01ESVc4ZHZQOU5lZ1U3VkgxR0E3bGp4MUtzemUvNFJkS0VvNVRJRmo3NjZMR2daV2Y0YUIyRStXVXdydlBJTkkyeXhKKzAyaVV5Q3FTZ2RVNERXRjZnVDFPTW56bTlZSDJKZ1UxaWpqZEhWR1RGQnNSQng5cXhoa0cwclhGbG5CbDBHODh6SlU1a0NFK1ZtREF6OU1VUnhrOUtNUFY0OUF5N29mbW9udW5Lb3N0VHJIQzBFSHhzT0xsSWI5UVNPVEhMS0U0dzhvR295eFBjVFVJQ0g2bUJMR2ZNNEJDUXJzTEpVNlZPQU1RSlNDZ0tFNVE1QlBNVmVDYXhEeDd4KzFFcUJ6R2dmcG45R2YwS05PbklOL0huQ3NBcHRnR1BOSTREN2Z5RlVkQkVrTkNGUWlBUUZLWXI5eWpGR1hiT0tyZjlZN0I3SWk4Q1ZjcVJDRmd4TVg3OTUvSFl1bytkdnVUb2RKVU5lWE82QS9OdWNoam50SXo2WXVpT010TzQ0alNxUHpyTUxmMkM5TE1TRFR3WTI2OXE4RXlOcXRJMW01KzF2Yk5icExjNTBBUU1CY1lGRVl5MTVETzBPaFBFN2R2WE1IekcyNVplMjlwYm9OK08xOHZkYnBaYWVTdUszMmUvSW56WWp6RklXNWxtdGZVbjlhcldiNXU5WFMvcFhjcW44eGRhdVNCOU01eFlFenZiT2JGcmRIdkVyUnN2d1RqVWI1dWZzUTZ0MEZjM2lmZDBHQ2pnOXU2RjVqZXFzTHd4aVBpTHAvTCtVVTg3YytudzVuV1dheDBjMlJUZHpyVG5JMnRtWVpsNnlQd0lXaGlhWDdmNFAxd056VjIxbUNobTJCMzVzNk9EaXluOHpDci9JSnhKMXMzUjVwQml0ditiRWVzb2ZsbzY1MkY1VXlYYzlzY3JmVGVvMDJ0emR4dUR5MG5CRTVHSVh5QmsxaTdNWE42ODRXK2RWZGFBRTluSnZnWnpMa014czdCWXlQK3FlOUxiK1BzdGhCbkJuamRFNGM3WnU1ZDVsTFFqbnFSblh0TDU4VnJtUVVDTEhmZVRyeURjZHMvYWhUMTluNWtEZDJsbTNpTWFtalp5ZjBENUhPVWZaTnJsbmFKZjNrL0NBdklsZENzOEZrSHREZjNYcGw3YmQzcWtzb21jeS81UjhjOFZ2cXg1KzJhT1Z6aVQ3alFhV3FBNXZib3VwRCtwSFBNNTlYRG9FdkVuTTBzbm02Y2ltdC9lbkJYSXgydHB0UWVkdzdCUk9hV3JTR2ZMdVFYWWo5NXpiYTJYdExjWFJteWxzcDVvTTJFRnU1Y2NqVXRCM0p6TVBqUjVvNDdUNmpwSEtxYUNFdWRSYjJCeUUxYmFudGVhMGYvMHU1QWZVb3M0ayttU2NBb2Q1Y0JsWHRpN0c2OWlVbGxmVE4zN3pPVDJoT0hlME9hcmNGSHhBc21VOTJkSDNON3lvZTVYdlVLcU9sSWFqVnU2OTY0OHBsbzhPeUpQVU5jNW1qclppanJ1MXpMYWIxQ0s5MW51dy9jZytib0lQWmw1ZDhSeitQZWdQb0F2bFk4YTI3cHVwbkpQYkk4NmZFR08vTFo2TWwxZXRSbmRPK09UUER2NUc2WmovUDlXL3F0S3IvSmNhOGY5VzFyN21yYWhQd3QzQ1hVRXJOa3pQdEZsNS9GeXRhcjdRRHkrZ0krZWpDbVRkZDJ0Mmo1RE90ektuL2ozQjlxR09xKzVXaDIweEgxc0pNYURvemlQTFk3ZHZoNlJkL0Z0Yzl4Q3E4MTFlYkw5czVkQ1kyN2IrWkRydmV3M3dDL2tCb3ZiR2Noem9iNXlMTHQvaHMreFhwbHhlVit5TDY5N2xIUWVQbXNvYkVaQTRmVUg0ODBCUG9ZWVJrRDZqNDBSc2R6ek1rRFV1NlpDdk4yNXJpOWxkYVpPYVA3RHpsR2JOUmNPNTI5UDdGZVhzOWdnYU8zRWJQSXVnVm55dkhNMXBMaGJIZWZ6M2RXZjNiUUhYdjNmS3hudVU1dlJYKzQ0K2xUc0RLcEx6akFHa3JmdHVQREh2Z2N2N2YxVzJZTDlOdUpzeEc0M1ZyRDZlQ092bzRmYTNBelN6cjk4STgvYXI5RU44VGpQUFd4K09ZZ3puSEd4YTg4SmVJSmRqOCtkVWJpSXdVamhLRVFTeThDeGpwbjhBazkreEx5VmozbjlRTHpERDU2aUtHWE9FSUZWNkZKYURDSXhSUFJRdFFEek9LNjdBUjQxZHlVUUdvU2lkNUdJak1ja0p6OUY5QWwwamsyUldtSS93dG9DVlFoaTQ0R1B2dmJXSWo0L1MraEhpVW4zU0RzaG9SQ3QreVFpTml4OXdRZGt1aEcwampCYVVaS1Zhc3U4aE8vdDExbzJiU1ZUYWpDcTFhcERKS25zdDFTem9EZlJ5bGJtNS92TUUwWVZlSU50RkhRQlBMejlpdnlzV2ljS2tvOFM0bGNjb0EzS0tmQVZzQUhqVk5MVzhraktzeFBjdjR4VXYvUjVxOTRVYzQ4S0xFelBGMzJTb1NKQXRCVUhYQVlacC9BSE10VHVZZmNwSWV2SUp2YTVmVVpxdDY4RnRWY0xlNFRpcVpFRUhLY25OUi9UUm1nQzVSK0JMV3RPNEVJTm1WREtQNVNVbEdjb3EzSCt5eU9LWS93Yzg3Vlk1T28wa3ZxcVNKUkFUU1Vha0JFdXcwSzNGeHIxMW9EV3VzWWJnZnczdkRqelFaajZNSHpSb0l6cU1pSStQWDlwZHBTZGIzdTVZUUdkZEZiOGt3VmhJSDNFMXhiL282VDdCTkpwbDJuKy9mRDQyS3U3RkZLa1BlYkJRZzB1QURzY0NvUGpZOTRBMmxVREduOUN1bDFFemJFY2tXZFpYQSt4emV2cTZ0WE8xTGU4K3JYdVg3VnJNTmk4K2Y2ODlWbEhXcEl0T0FYdFRCRlBvYU5RT0xnSTUreE1DcVAwcXBzNExLeXhZaG1XMmpCL2QyWHViL1MzaVgvYkdJQytmb1k2aEZHdndqeGlRYU4yaTk1WVAvSUlkZUJ1SERLVFN6T21lbWcxLy85aVRGOHpuQWFJYW9NVUlZOGNZbUM0eUlDVDJGK2YwQUl5RHBVNnlkRkFCWkZXTDRpK3hSNC9nMDc4QjlVWEYraHVvSXFwaHo3ZlJXM1d0cFZvNElMUEpFNG0rTlA5bE5KaHN0cy9ET2JOSTdsV2ZRSW56aTREMytTZVlsek12OGVTL3lKTTUweEZGV1g5bC8vQjF6QkJ6bVhFQUFBIn0=",
+    "DCOS_PACKAGE_VERSION": "9.0.5",
+    "DCOS_PACKAGE_NAME": "weblogic",
+    "HAPROXY_0_VHOST": "weblogicbuild.coffeemenu.mesosphere.io"
+  },
+  "id": "/__REPLACEME__/weblogic",
+  "backoffFactor": 1.15,
+  "backoffSeconds": 1,
+  "container": {
+    "type": "MESOS",
+    "volumes": [],
+    "docker": {
+      "image": "digitalemil/mypublicrepo:coffeemenu-weblogic-12.2.1.3-8u171-linux-x64-0.1.0",
+      "forcePullImage": true,
+      "parameters": []
+    }
+  },
+  "cpus": 1,
+  "disk": 0,
+  "env": {
+    "myjdbcurl": "jdbc:mysql://__REPLACEVIP__mysql.marathon.l4lb.thisdcos.directory:3306/petclinic",
+    "myjdbcuser": "root",
+    "myjdbcpassword": "root"
+  },
+  "fetch": [
+    {
+      "uri": "http://devtoolsjenkins.marathon.l4lb.thisdcos.directory:80/job/Petclinic/__REPLACEBUILD__/artifact/target/petclinic.war",
+      "extract": true,
+      "executable": false,
+      "cache": false
+    }
+  ],
+  "healthChecks": [
+    {
+      "gracePeriodSeconds": 60,
+      "intervalSeconds": 10,
+      "maxConsecutiveFailures": 12,
+      "portIndex": 0,
+      "timeoutSeconds": 20,
+      "delaySeconds": 15,
+      "protocol": "MESOS_HTTP",
+      "path": "/"
+    }
+  ],
+  "instances": 1,
+  "maxLaunchDelaySeconds": 3600,
+  "mem": 2048,
+  "gpus": 0,
+  "networks": [
+    {
+      "mode": "host"
+    }
+  ],
+  "portDefinitions": [
+    {
+      "labels": {
+        "VIP_0": "/weblogicbuild__REPLACEBUILD__:80"
+      },
+      "name": "weblogicbuild__REPLACEBUILD__",
+      "protocol": "tcp",
+      "port": 8080
+    }
+  ],
+  "requirePorts": false,
+  "upgradeStrategy": {
+    "maximumOverCapacity": 1,
+    "minimumHealthCapacity": 1
+  },
+  "killSelection": "YOUNGEST_FIRST",
+  "unreachableStrategy": {
+    "inactiveAfterSeconds": 0,
+    "expungeAfterSeconds": 0
+  },
+  "constraints": []
+}

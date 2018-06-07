@@ -59,12 +59,12 @@ pipeline {
 
         stage("Deploy") { 
             steps {
-                sh "cp tomcat.template tomcat.json"
-                sh "sed -ie 's@__REPLACEME__@test/build"+"${env.BUILD_NUMBER}"+"@g;' tomcat.json"
-                sh "sed -ie 's@__REPLACEVERSION__@"+"${VERSION}"+"@g;' tomcat.json"
-                sh "sed -ie 's@__REPLACEBUILD__@"+"${env.BUILD_NUMBER}"+"@g;' tomcat.json"
-                sh "sed -ie 's@__REPLACEVIP__@testbuild"+"${env.BUILD_NUMBER}"+"@g;' tomcat.json"
-                sh "curl  -X POST marathon.mesos:8080/v2/apps -d @tomcat.json -H 'Content-type: application/json'"
+                sh "cp wls.template wls.json"
+                sh "sed -ie 's@__REPLACEME__@test/build"+"${env.BUILD_NUMBER}"+"@g;' wls.json"
+                sh "sed -ie 's@__REPLACEVERSION__@"+"${VERSION}"+"@g;' wls.json"
+                sh "sed -ie 's@__REPLACEBUILD__@"+"${env.BUILD_NUMBER}"+"@g;' wls.json"
+                sh "sed -ie 's@__REPLACEVIP__@testbuild"+"${env.BUILD_NUMBER}"+"@g;' wls.json"
+                sh "curl  -X POST marathon.mesos:8080/v2/apps -d @wls.json -H 'Content-type: application/json'"
             }
         }
 
@@ -73,7 +73,7 @@ pipeline {
                 sh "sleep 60"
                 sh "curl -LO https://s3-us-west-2.amazonaws.com/mesosphere-demo-others/apache-jmeter-4.0.tgz"
                 sh "cp petclinic_test_plan.template petclinic_test_plan.jmx"
-                sh "sed -ie 's@__INSERTHOST__@tomcatbuild"+"${env.BUILD_NUMBER}"+".marathon.l4lb.thisdcos.directory@g;' petclinic_test_plan.jmx"
+                sh "sed -ie 's@__INSERTHOST__@weblogicbuild"+"${env.BUILD_NUMBER}"+".marathon.l4lb.thisdcos.directory@g;' petclinic_test_plan.jmx"
                 sh "tar xzf apache-jmeter-4.0.tgz"
                 sh "./apache-jmeter-4.0/bin/jmeter -n -l petclinic.jtl -t petclinic_test_plan.jmx"
             }
@@ -87,7 +87,7 @@ pipeline {
     post { 
         always { 
             sh "curl  -X PUT marathon.mesos:8080/v2/apps//test/build"+"${env.BUILD_NUMBER}"+"/mysql -d @mysql0.json -H 'Content-type: application/json'"          
-            sh "curl  -X PUT marathon.mesos:8080/v2/apps//test/build"+"${env.BUILD_NUMBER}"+"/tomcat -d @tomcat0.json -H 'Content-type: application/json'"          
+            sh "curl  -X PUT marathon.mesos:8080/v2/apps//test/build"+"${env.BUILD_NUMBER}"+"/weblogic -d @wls0.json -H 'Content-type: application/json'"          
               // marathon credentialsId: 'dcos-token', id: '/test/build'+"${env.BUILD_NUMBER}"+'/mysql', url: 'http://marathon.mesos:8080', filename: 'mysql0.json', forceUpdate: true
 
         }
