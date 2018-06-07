@@ -70,7 +70,7 @@ pipeline {
 
         stage("Load Test") {
             steps {
-                sh "sleep 60"
+                sh "sleep 180"
                 sh "curl -LO https://s3-us-west-2.amazonaws.com/mesosphere-demo-others/apache-jmeter-4.0.tgz"
                 sh "cp petclinic_test_plan.template petclinic_test_plan.jmx"
                 sh "sed -ie 's@__INSERTHOST__@weblogicbuild"+"${env.BUILD_NUMBER}"+".marathon.l4lb.thisdcos.directory@g;' petclinic_test_plan.jmx"
